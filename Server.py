@@ -3,10 +3,9 @@ import socket
 import socketserver
 import webbrowser
 from functools import partial
-
 import pyqrcode
-
 import Authentication
+import Create_zip
 
 
 class Server:
@@ -35,11 +34,23 @@ class Server:
         url.svg("myqr.svg", scale=8)
         webbrowser.open('myqr.svg')
 
-if __name__ == '__main__':
-    #desktop path
+
+
+def main():
+    # desktop path
     desktop = os.path.join(os.path.join(os.environ['USERPROFILE']),
-                           'OneDrive/Desktop')
+                           'Desktop')
     os.chdir(desktop)
+
+
     server = Server()
     server.run('user', 'passwd', desktop)
+
     server.qr()
+
+
+if __name__ == '__main__':
+    Create_zip.creation()
+    main()
+
+
