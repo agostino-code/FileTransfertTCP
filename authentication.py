@@ -1,6 +1,3 @@
-# Extended python -m http.serve with --username and --password parameters for
-# basic auth, based on https://gist.github.com/fxsjy/5465353
-
 import base64
 from http.server import SimpleHTTPRequestHandler
 
