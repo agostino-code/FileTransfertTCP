@@ -1,4 +1,2 @@
 # FileTransfertTCP
-Final commit, project finished
-
-FileTransfertTCP with Authentication
+FileTransfertTCP with Authentication.
